@@ -1,6 +1,6 @@
 Focussing on building a Recaptcha v3 HOC using the [React Google Recaptcha](https://github.com/t49tran/react-google-recaptcha-v3) V3 NPM module.
 
---
+<hr>
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
