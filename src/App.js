@@ -1,11 +1,16 @@
 import React from "react";
 import "./App.css";
-import reCaptchaContentComponent from "./components/reCaptchaContentComponent";
+import ReCaptchaContentComponent from "./components/reCaptchaContentComponent";
+import { GoogleReCaptchaProvider } from "react-google-recaptcha-v3";
+
+const recaptchaKeyFromEnv = process.env.REACT_APP_RECAPTCHA_SITE_KEY;
 
 function App() {
   return (
     <div className="App">
-      <reCaptchaContentComponent />
+      <GoogleReCaptchaProvider reCaptchaKey={recaptchaKeyFromEnv} language="en">
+        <ReCaptchaContentComponent />
+      </GoogleReCaptchaProvider>
     </div>
   );
 }
