@@ -44,6 +44,7 @@ const reCaptchaContentComponent = (props) => {
         <button label="Submit" onClick={sendMessage()}>
           Submit
         </button>
+        <GoogleReCaptcha onVerify={(token) => console.log(token)} />
       </React.Fragment>
     </GoogleReCaptchaProvider>
   );
