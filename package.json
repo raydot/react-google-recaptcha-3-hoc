@@ -1,39 +1,56 @@
 {
   "name": "react-google-recaptcha-3-hoc",
-  "version": "0.1.0",
-  "private": true,
-  "dependencies": {
-    "@testing-library/jest-dom": "^4.2.4",
-    "@testing-library/react": "^9.3.2",
-    "@testing-library/user-event": "^7.1.2",
-    "react": "^16.13.1",
-    "react-dom": "^16.13.1",
-    "react-google-recaptcha-v3": "^1.4.1",
-    "react-scripts": "3.4.1",
-    "typescript": "^3.8.3"
-  },
+  "version": "1.4.1",
+  "description": "React component for google-recaptcha v3",
+  "module": "dist/react-google-recaptcha-3-hoc.esm.js",
+  "main": "dist/react-google-recaptcha-3-hoc.cjs.js",
+  "types": "dist/types/index.d.ts",
   "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "build": "rollup -c rollup.config.js",
+    "prepublish": "npm run build",
+    "build-example": "webpack --config webpack.config.js",
+    "lint": "tslint -c tslint.json 'src/**/*.ts'"
   },
-  "eslintConfig": {
-    "extends": "react-app"
+  "author": "Dave Kanter with full credit to https://github.com/t49tran",
+  "homepage": "https://https://github.com/raydot/react-google-recaptcha-3-hoc",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://https://github.com/raydot/react-google-recaptcha-3-hoc"
   },
-  "browserslist": {
-    "production": [
-      ">0.2%",
-      "not dead",
-      "not op_mini all"
-    ],
-    "development": [
-      "last 1 chrome version",
-      "last 1 firefox version",
-      "last 1 safari version"
-    ]
+  "peerDependencies": {
+    "react": "^16.8",
+    "react-dom": "^16.8"
+  },
+  "dependencies": {
+    "hoist-non-react-statics": "^3.3.2"
   },
   "devDependencies": {
-    "rollup": "^1.14.3"
+    "@types/enzyme": "3.1.15",
+    "@types/enzyme-adapter-react-16": "1.0.3",
+    "@types/hoist-non-react-statics": "^3.3.1",
+    "@types/jest": "24.0.13",
+    "@types/react": "16.8.3",
+    "@types/react-dom": "16.0.11",
+    "@types/react-test-renderer": "16.8.2",
+    "awesome-typescript-loader": "5.2.1",
+    "enzyme": "3.8.0",
+    "enzyme-adapter-react-16": "1.7.1",
+    "jest": "24.8.0",
+    "react": "16.12.0",
+    "react-dom": "16.12.0",
+    "rollup": "1.14.3",
+    "rollup-plugin-commonjs": "10.0.0",
+    "rollup-plugin-node-resolve": "5.0.1",
+    "rollup-plugin-sourcemaps": "0.4.2",
+    "rollup-plugin-typescript2": "0.21.1",
+    "source-map-loader": "0.2.4",
+    "ts-jest": "24.0.2",
+    "tslint": "5.15.0",
+    "tslint-react": "4.0.0",
+    "typescript": "3.5.1",
+    "webpack": "4.29.4",
+    "webpack-cli": "3.2.3",
+    "webpack-dev-server": "3.1.14"
   }
 }
